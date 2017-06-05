@@ -8,8 +8,7 @@
     <img id="img"></img>
     <script>
       navigator.mediaDevices.getUserMedia({video: true, audio: false}).then(stream => {
-        vid.srcObject = stream;
-        img.src = URL.createObjectURL(stream);
+        vid.src = URL.createObjectURL(stream);
         vid.play();
       });
     </script>
