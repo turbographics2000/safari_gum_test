@@ -7,7 +7,8 @@
     <video id="vid" autoplay></video>
     <script>
       navigator.mediaDevices.getUserMedia({video: true}).then(stream => {
-        vid.srcObject = stream;
+        vid.src = URL.createObjectURL(stream);
+        vid.play();
       });
     </script>
   </body>
